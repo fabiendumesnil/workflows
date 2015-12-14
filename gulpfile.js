@@ -46,4 +46,4 @@ gulp.task('watch', function() {
 	gulp.watch('components/sass/*.scss', ['compass']);
 })
 //gulp.task('all', ['coffee','js','compass']); //chaining gulp tasks
-gulp.task('default', ['coffee','js','compass']); //gulp task named 'default' will be executed if you just run the gulp command
+gulp.task('default', ['coffee','js','compass','watch']); //gulp task named 'default' will be executed if you just run the gulp command
