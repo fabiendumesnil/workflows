@@ -39,16 +39,6 @@ gulp.task('compass', function() {
 			.on('error', gutil.log))
 		.pipe(gulp.dest('builds/development/css'))
 });
-/*
-gulp.task('compass', function() {
-  gulp.src(sassSources)
-    .pipe(compass({
-      sass: 'components/sass',
-      image: 'builds/development/images',
-      style: 'expanded'
-    })
-    .on('error', gutil.log))
-    .pipe(gulp.dest('builds/development/css'))
-    .pipe(connect.reload())
-});
-*/
+
+//gulp.task('all', ['coffee','js','compass']); //chaining gulp tasks
+gulp.task('default', ['coffee','js','compass']); //gulp task named 'default' will be executed if you just run the gulp command
