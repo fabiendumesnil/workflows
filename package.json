@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "description": "a project to showcase workflow with Gulpjs Git and Browserify",
   "main": "index.js",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "?.git"
   },
   "author": "Fabien Dumesnil",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7"
+  }
 }
