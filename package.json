@@ -1,0 +1,12 @@
+{
+  "name": "workflows",
+  "version": "0.0.1",
+  "description": "a project to showcase workflow with Gulpjs Git and Browserify",
+  "main": "index.js",
+   "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Fabien Dumesnil",
+  "license": "ISC"
+}
