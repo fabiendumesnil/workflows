@@ -72,6 +72,12 @@ gulp.task('html', function () {
 	.pipe(connect.reload())
 });
 
+gulp.task('images', function () {
+  	gulp.src('builds/development/images/**/*.*')
+  		.pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
+		.pipe(connect.reload())
+});
+
 gulp.task('json', function () {
 	gulp.src(outputDir +'js/*.json')
 		.pipe(connect.reload())
@@ -82,10 +88,11 @@ gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js']);
 	gulp.watch('components/sass/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['html']);
+	gulp.watch('builds/development/images/**/*.*', ['images']);
 	gulp.watch(outputDir +'js/*.json', ['json']);
 });
 //gulp.task('all', ['coffee','js','compass']); //chaining gulp tasks
-gulp.task('default', ['html','json','coffee','js','compass','connect','watch']); //gulp task named 'default' will be executed if you just run the gulp command
+gulp.task('default', ['html','json','coffee','js','compass','images','connect','watch']); //gulp task named 'default' will be executed if you just run the gulp command
 
 gulp.task('connect', function() {
 	connect.server({
